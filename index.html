@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>:: Taxisecu ::</title>
+<link href="font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+<link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<link href="bootstrap.css" rel="stylesheet" media="screen">
+<script src="jquery-mobile/jquery.min.js"></script>
+<script src="jquery-mobile/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery-mobile/script.js"></script>
+<script type="text/javascript" src="jquery-mobile/jquery-latest.min.js"></script>
+<script>
+		( function( $ ) {
+	$( document ).ready(function() {
+	$('#student-list > ul > li > a').click(function() {
+	  $('#student-list li').removeClass('active');
+	  $(this).closest('li').addClass('active');	
+	  var checkElement = $(this).next();
+	  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+		$(this).closest('li').removeClass('active');
+		checkElement.slideUp('fast');
+	  }
+	  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+		$('#student-list ul ul:visible').slideUp('fast');
+		checkElement.slideDown('fast');
+	  }
+	  if($(this).closest('li').find('ul').children().length == 0) {
+		return true;
+	  } else {
+		return false;	
+	  }		
+	});
+	});
+	} )( jQuery );
+</script>
+
+
+</head>
+<body>
+<!--Start of the Welcome of the Texisecu -->
+<div data-role="page" id="page">
+  <div data-role="header">
+    <div class="container">
+      <div align="center">
+        <div class="logo"> <a href="#page2"> <img src="images/logo.png" width="150" height="150"></a> </div>
+        <div class="container">
+          <div align="center">
+            <div class="welcome"> Welcome To TaxiSecu ! </div>
+            <div class="welcome_one">Keep Your Travel by Taxisecu!</div>
+            <br>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  <div data-role="content">
+    <div align="center"> <a href="#page2">
+      <div class="contant_home">CONTINUE</div>
+      </a> </div>
+  </div>
+</div>
+<!--End of the Welcome of the Texisecu -->
+<!--Start of the Register yourself -->
+<div data-role="page" id="page2">
+  <div data-role="header"> 
+     <div align="center">
+      <div class="logo"><a href="#page2"><img src="images/logo.png" width="150;" height="150px;"></a> </div>
+    </div>
+  </div>
+  <div data-role="content">
+  
+    <div class="container">
+      <div align="center">
+        <div class="welcome"> Register Yourself </div>
+        
+      </div>
+      <br>
+
+      
+       <form method="post">
+        <div class="container">
+        <div class="elemt-inpt">
+            <select class="country">
+              <option value="usa">Sellect Country</option>
+              <option value="india">India</option>
+              <option value="uk">United Kingdom</option>
+              <option value="usa">United States</option>
+              <option value="india">India</option>
+              <option value="uk">United Kingdom</option>
+              <option value="usa">United States</option>
+              <option value="india">India</option>
+            </select>
+          </div>
+          
+          <div class="mob_txt">
+          <input type="text" name="textinput" id="textinput" placeholder="+91" value="" required class="text_area"/>
+          </div>
+          <div class="mob_txtr">
+          <input type="text" name="textinput" id="textinput" placeholder="Enter Mobile No." value="" required class="text_area"/>
+          </div>
+         </div>
+      
+        <div class="contant">
+        <a href="#page3"><button type="submit" class="prfil-btn" >CONTINUE</button></a>
+        
+        </div>
+      </form>
+      
+    </div>
+    
+  </div>
+    </div>
+
+
+<!--Start of the Register yourself -->
+
+<!-- Start Enter your Security code -->
+<div data-role="page" id="page3">
+  <div data-role="header">
+    <div align="center">
+      <div class="logo"> <a href="#page2"> <img src="images/logo.png" width="150;" height="150px;"></a> </div>
+    </div>
+  </div>
+  <div data-role="content">
+     <form method="post">
+    <div class="container">
+      <div align="center">
+        <div class="welcome"style="margin-bottom:15px;"> Enter your Security code </div>
+      </div>
+      <div class="container">
+        <div align="center">
+          <input type="text" name="textinput" id="textinput" placeholder="Security code" value="" required class="text_area"/>        </div>
+        <div class="contant">
+        <a href="#page4"> <button type="submit" class="prfil-btn" >CONTINUE</button></a>
+        
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+<!-- End  Security code --> 
+
+<!-- Manage Profile User ID -->
+<div data-role="page" id="page4">
+<div class="pageh">
+    <img src="logo.png">
+        </div>
+ 
+  <div data-role="content"><br>
+
+
+   <form method="post">
+       <div class="container">
+        <div align="center">
+
+          <div class="logo"> <img src="images/profile.png" width="120" height="120"> </div>
+          <div class="welcome"> Welcome, 918802989146 </div>
+
+          <input type="text" name="textinput" id="text_mpui_fn" placeholder="Enter First Name" value="" required class="text_area"/>
+         <input type="text" name="textinput" id="text_mpui_ln" placeholder="Enter Last Name" value="" required class="text_area"/>
+<input type="text" name="textinput" id="text_mpui_ei" placeholder="Enter Email" value="" required class="text_area"/>
+        </div>
+        <div class="contant">
+         <a href="#page5"><button type="submit" class="prfil-btn" >SAVE PROFILE</button></a>
+        
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+<!-- End Manage Profile User ID --> 
+
+<!-- taxi information -->
+<div data-role="page" id="page5">
+<div class="pageh">
+    <img src="logo.png">
+        </div>
+   <div data-role="content"><br>
+
+
+    <form method="post">
+    <div class="container">
+        <div align="center">
+
+          <div class="logo" style="margin-top:50px;"> <img src="images/profile.png" width="120" height="120"> </div>
+          <div class="welcome"> Welcome, 918802989146 </div><br>
+
+          <input type="text" name="textinput" id="text_mpui_fn" placeholder="Taxi No..." value="" required class="text_area"/>
+     	
+        </div>
+        <div class="contant">
+        <a href="#page6"> <button type="submit" class="prfil-btn">START RIDE</button></a>
+        
+        </div>
+    </div>
+    </form>
+       <div class="container">
+     <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</div>
+   
+  </div>
+  <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: #000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col1.png" />	</a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting1.png" /></a>
+                </div>
+	</div></nav>
+</div>
+<!-- End of the taxi information --> 
+<!-- Start of the mobile verification SMS -->
+<div data-role="page" id="page6">
+<div class="pageh">
+    <img src="logo.png">
+        </div>
+   <div data-role="content"><br>
+
+    <form method="post">
+    <div class="container">
+        <div align="center">
+
+          <div class="logo" style="margin-top:50px;"> <img src="images/profile.png" width="120" height="120"> </div>
+          <div class="welcome"> Welcome, 918802989146 </div>
+          <input type="text" name="textinput" id="text_mpui_fn" placeholder="HR 51 X 0954" value="" required class="text_area"/>
+          <input type="text" name="textinput" id="text_mpui_fn" placeholder="Riding from last 2:15 hours" value="" required class="text_area"/>
+     	<div class="welcome_profile">Verification :  SMS Send to <a href="#" class="fav_color">Favorites</a></div>
+        </div>
+        <div class="contant_finish">
+        <a href="#page7"> <button type="submit" class="prfil-btn" >FINISH RIDE</button></a>
+        
+        </div>
+    </div>
+    </form>
+    
+       <div class="container">
+     <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</div>
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: #000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col2.png" />	</a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting1.png" /></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the Verification SMS -->
+
+<!-- Start of the Like to Rate Ride --> 
+<div data-role="page" id="page7">
+<div class="pageh">
+    <img src="logo.png">
+        </div>
+   <div data-role="content"><br>
+
+    <form method="post">
+    <div class="container">
+      <div align="center">
+
+          <div class="logo" style="margin-top:50px;"> <img src="images/profile.png" width="120" height="120"> </div>
+          <div class="welcome"> Like to Rate Ride </div>
+
+    <input type="radio" name="radiogroup" id="radio-1" checked>
+    <label for="radio-1" class="rad_button">Average  (default average)</label>
+
+
+      <input type="radio" name="radiogroup1" id="radio-2">
+    <label for="radio-2" class="rad_button">Good</label>     
+
+   <input type="radio" name="radiogroup2" id="radio-3">
+    <label for="radio-3" class="rad_button">Excellent </label>     
+        <div class="contant">
+        <a href="#page"> <button type="submit" class="prfil-btn" >CONTIUNE</button></a>
+        
+  
+        
+        </div></div>
+    </div>
+    </form>
+                <div class="container">
+     <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</div>
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col1.png" />	</a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting1.png" /></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the Like to Rate Ride --> 
+<!-- Start of the Favourate contact --> 
+<div data-role="page" id="page8">
+<div class="pageh">
+    <img src="logo.png">
+        </div>
+      
+   <div data-role="ui-content_fav">
+
+      <div class="favourate_bg">
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    
+    <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+     <div class="favourate_change_color">
+    <div class="favourate_change_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+ 
+    </div>
+     <div class="favourate_change_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    <div class="favourate_bg_color">
+    <div class="favourate_bg_color_lt"> 
+    <span>Sunil Kumar Sharma</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="favourate_bg_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+    </div>
+    
+      </div>
+ 
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity_hover.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting1.png" /></a>
+                </div>
+	</div></nav>
+  </div>
+  
+</div>
+<!-- End of the Favourate contact --> 
+
+<!-- Start of the defalt phone book --> 
+<div data-role="page" id="page9">
+<div class="pageh">
+    <img src="logo.png">
+    <div class="default-contact">
+  <input type="text" name="textinput2" id="textinput2" value="" placeholder="Search" class="search-box" />
+  </div>
+        </div>
+   <div data-role="ui-content_fav">
+  
+      <div class="default_phone">
+    <div class="default_phonebook">
+    <div class="default_phonebook_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_rt1">
+  <img src="images/small_logo.png">
+     </div>
+    </div>
+
+<div class="default_phonebook_color">
+    <div class="default_phonebook_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_color_rt1">
+  <img src="images/small_logo.png">
+     </div>
+    </div>
+    
+    <div class="default_phonebook">
+    <div class="default_phonebook_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_rt1">
+
+     </div>
+    </div>
+    <div class="default_phonebook_color">
+    <div class="default_phonebook_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_color_rt1">
+  <img src="images/small_logo.png">
+     </div>
+    </div>
+    <div class="default_phonebook">
+    <div class="default_phonebook_lt"> 
+    <span>Dinesh Gautam Sharma</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_rt1">
+
+     </div>
+    </div>
+    
+    <div class="default_phonebook_color">
+    <div class="default_phonebook_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_color_rt1">
+  <img src="images/small_logo.png">
+     </div>
+    </div>
+    <div class="default_phonebook">
+    <div class="default_phonebook_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_rt1">
+
+     </div>
+    </div>
+    
+    <div class="default_phonebook_color">
+    <div class="default_phonebook_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_color_rt1">
+  <img src="images/small_logo.png">
+     </div>
+    </div>
+
+
+<div class="default_phonebook_color">
+    <div class="default_phonebook_color_lt"> 
+    <span>Kapil Aggarwal</span>
+    <h6> +91-9910823810</h6>
+    </span>
+     </div>
+     <div class="default_phonebook_color_rt">
+    <input name="check" type="checkbox" value="">
+     </div>
+     <div class="default_phonebook_color_rt1">
+  <img src="images/small_logo.png">
+     </div>
+    </div>
+</div>
+ <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi_hover.png"/></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting1.png" /></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the defalt phone book --> 
+
+<!-- Start of the Taxisecu Settings--> 
+<div data-role="page" id="page10">
+<div class="pageh">
+    <img src="logo.png">
+        </div>
+   <div data-role="ui-content_fav">
+  <div class="settings_app"> Settings </div>
+  <div class="settings_taxisecu">
+  <div class="settings_taxisecu_lt"><i class="fa fa-taxi" style="font-size:20px;"></i> </div>
+    <div class="settings_taxisecu_rt"><a href="#page11"> About Taxisecu</a></div>
+      <div class="settings_taxisecu_lt"><i class="fa fa-user" style="font-size:20px;"></i></div>
+    <div class="settings_taxisecu_rt"><a href="#page4" style="color:#fff;">Manage Profile</a></div>
+      <div class="settings_taxisecu_lt"><i class="fa fa-history"  style="font-size:20px;"></i></div>
+    <div class="settings_taxisecu_rt"><a href="#page12">My Ride History</a></div>
+      <div class="settings_taxisecu_lt"><i class="fa fa-map-marker"  style="font-size:20px;"></i> </div>
+    <div class="settings_taxisecu_rt"><a href="#page13">View Map of the last Taxi Ride</a></div>
+  </div>
+      
+ 
+
+ 
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png"/></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting-col1.png"/></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the Taxisecu Settings --> 
+
+<!-- Start of the about taxisecu --> 
+<div data-role="page" id="page11">
+<div class="pageh">
+<a href="#page10"><i class="fa fa-arrow-left" style="padding-left:10px; color:#FFF; font-size:20px; float:left; padding-top:5px;"></i></a>
+    <img src="logo.png">
+        </div>
+   <div data-role="content">
+  <div class="settings_app"> About Taxi Secu</div>
+  <div class="about_profile">
+  Abusive taxi drivers are fast becoming a major source of insecurity in large cities.<br>
+
+Multiple crimes occur on a daily basis by criminal taxi drivers conspiring with some apparent customers to rob or kill law abiding citizens.<br>
+
+Taking a taxi is increasingly becoming very hazardous and unsafe.<br>
+
+<br>
+Taxisecu was developed to prevent, fight and put a stop to this long lasting and growing issue.
+
+  </div>
+      
+ 
+
+ 
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png"/></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting-col1.png"/></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the about taxisecu --> 
+<!-- Start of the My Ride History --> 
+<div data-role="page" id="page12">
+<div class="pageh">
+<a href="#page10"><i class="fa fa-arrow-left" style="padding-left:10px; color:#FFF; font-size:20px; float:left; padding-top:5px;"></i></a>
+    <img src="logo.png">
+        </div>
+   <div data-role="ui-content_fav">
+      <div class="riding_history_main">
+  
+    <div class="wraper">
+	
+    
+    	
+ 
+        	
+                <div id='student-list'>
+                    <ul>
+                       
+                       
+                     
+                     <li class='has-sub'><a href='#'><span>30-May-2015</span></a>
+                          <ul>
+                              <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                       
+                       <li class='has-sub'><a href='#'><span>10-June-2015</span></a>
+                          <ul>
+                               <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                       
+                       <li class='has-sub'><a href='#'><span>25-Feb-2015</span></a>
+                          <ul>
+                             <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                       <li class='has-sub'><a href='#'><span>25-Feb-2015</span></a>
+                          <ul>
+                             <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                       <li class='has-sub'><a href='#'><span>25-Feb-2015</span></a>
+                          <ul>
+                             <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                       <li class='has-sub'><a href='#'><span>25-Feb-2015</span></a>
+                          <ul>
+                             <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                       <li class='has-sub'><a href='#'><span>25-Feb-2015</span></a>
+                          <ul>
+                             <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li><li class='has-sub'><a href='#'><span>25-Feb-2015</span></a>
+                          <ul>
+                             <li><div class="duamont"><span>Ahmedabad</span><p>10:05AM</p></div></li>
+                               <li><div class="duamont"><span>New Delhi</span><p>12:55PM</p></div></li>
+                             
+                             
+                          </ul>
+                       </li>
+                      </ul>
+                </div>
+                
+
+
+</div>
+    </div>
+ 
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png"/></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting-col1.png"/></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the my ride history --> 
+<!-- Start of the Google Map --> 
+<!-- Start of the about taxisecu --> 
+<div data-role="page" id="page13">
+<div class="pageh">
+<a href="#page10"><i class="fa fa-arrow-left" style="padding-left:10px; color:#FFF; font-size:20px; float:left; padding-top:5px;"></i></a>
+    <img src="logo.png">
+        </div>
+   <div data-role="content">
+  <div class="settings_app">View Map of the last Taxi Ride</div>
+  
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#000;">
+	<div data-role="footer">
+    
+	   <div class="navbar-header page-scroll">
+
+                    <a class="navbar-brand page-scroll" href="#page5" style="margin-left: auto; margin-right: auto">
+                        <img src="images/user-col.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page8" style="margin-left: auto; margin-right: auto">
+                        <img src="images/w_activity.png" /></a>
+                    <a class="navbar-brand page-scroll" href="#page9" style="margin-left: auto; margin-right: auto">
+                        <img src="images/taxi1.png"/></a>
+                    <a class="navbar-brand page-scroll" href="#page10" style="margin-left: auto; margin-right: auto">
+                        <img src="images/setting-col1.png"/></a>
+                </div>
+	</div></nav>
+  </div>
+</div>
+<!-- End of the about taxisecu --> 
+<!-- End of the Google Map --> 
+
+
+</body>
+</html>
