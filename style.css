@@ -3,7 +3,7 @@
     src: "..."
 }
 @font-face {
-    font-family:"GFSDidot Regular";
+    font-family:"ufonts.com_calibri-bold";
     src: "..."
 }	
 
@@ -14,9 +14,8 @@ margin:0px auto 0px auto;
 padding:0px 0px 0px 0px;
 position:fixed;
 width:100%;
-text-align:center;
-z-index:999;
 top:0px;
+height:35px;
 
 }
 .logo {
@@ -31,6 +30,7 @@ top:0px;
 	font-size:22px;
 	text-align:center;
 	width:100%;
+	font-family:"HelveticaNeue-MediumCond";
 	
 
 	
@@ -45,6 +45,7 @@ top:0px;
 	font-style:italic;
 	text-align:center;
 	width:100%;
+	 font-family:"Lithos Pro Regular";
 
 	
 	
@@ -268,9 +269,9 @@ background: -o-linear-gradient(top, #fdfdfd 10%,#969495 95%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, #fdfdfd 10%,#969495 95%); /* IE10+ */
 background: linear-gradient(to bottom, #fdfdfd 10%,#969495 95%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#969495',GradientType=0 ); /* IE6-9 */
-  height:50px;
-    margin-top:13px;
-    padding-top: 0.1px;
+  height:43px;
+    margin-top:31px;
+    padding-top: 1.5px;
 	color:#fff ;
 
 }
@@ -289,7 +290,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', end
 .default_phone{
 	width:100%;
 	background-color:#FFF;
-    margin:95px auto 0 auto;
+    margin:74px auto 0 auto;
     position:absolute; 
     z-index:1;
     top:0px; bottom:84px; left:0;
