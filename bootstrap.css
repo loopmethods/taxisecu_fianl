@@ -305,8 +305,7 @@ body {
   line-height: 1.428571429;
   color: #333333;
   background-image:url(images/header-bg.jpg);
-  background-repeat:repeat-x;
- background-position:fixed;
+ background-attachment: fixed; 
  }
 
 input,
@@ -3240,7 +3239,7 @@ button.close {
   float: left;
   padding-top: 15px;
   padding-bottom: 0px;
-  padding-right:4px;
+  padding-right:5px;
   font-size: 18px;
   line-height: 20px;
   padding-left2px;
