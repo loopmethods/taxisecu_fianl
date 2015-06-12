@@ -169,7 +169,7 @@ clear:both;
 	background-color:#FFF;
     margin:34px auto 0 auto;
     position:absolute; 
-    z-index:999999;
+    z-index:1;
     top:0px; bottom:84px; left:0;
     width:100%;
     background:#aaa;
@@ -295,7 +295,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', end
 	background-color:#FFF;
     margin:77px auto 0 auto;
     position:absolute; 
-    z-index:999999;
+    z-index:1;
     top:0px; bottom:84px; left:0;
     width:100%;
     background:#aaa;
@@ -1390,7 +1390,7 @@ color: #FFFFFF;
 .favourate_bg {
   width: 100%;
   height:auto;
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 6px 0px;
   background-color: #FFF;
   margin: 34px auto 0 auto;
   overflow-x: hidden;
