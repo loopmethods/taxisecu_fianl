@@ -1,11 +1,11 @@
 @font-face {
-    font-family:"GFSDidot Regular";
-    src: "..."
-}
-@font-face {
-    font-family:"ufonts.com_calibri-bold";
-    src: "..."
-}	
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    src: url(fonts/pala.ttf);
+
+    }
+    body {
+              font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+        }
 
 .pageh
 {
@@ -32,8 +32,7 @@ max-height:35px;
 	font-size:22px;
 	text-align:center;
 	width:100%;
-	font-family:"HelveticaNeue-MediumCond";
-	
+font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 
 	
 	
@@ -47,8 +46,7 @@ max-height:35px;
 	font-style:italic;
 	text-align:center;
 	width:100%;
-	 font-family:"Lithos Pro Regular";
-
+font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	
 	
 }
@@ -70,10 +68,10 @@ max-height:35px;
 	color: #FFF;
 	font-size:15px;
 	width:98%;
-	font-family:"GFSDidot Regular";
 	line-height:22px;
 	text-align:justify;
 	padding:10px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	
 }
 .contant_home
@@ -84,10 +82,10 @@ max-height:35px;
 	font-size:18px;
 	border-radius:5px;
 	text-shadow:none;
-	font-family:"GFSDidot Regular";
 	cursor:pointer;
 	padding:8px;
 	margin-top:12px;
+	font-family:"OpenSans Light";
 }
 .text_area{
 background-color: rgba(0, 0, 0, 0.26) !important;
@@ -106,7 +104,6 @@ clear:both;
 	font-size:18px;
 	border-radius:5px;
 	text-shadow:none;
-	font-family:"GFSDidot Regular";
 	cursor:pointer;
 	margin-top:15px;
 	
@@ -120,7 +117,6 @@ clear:both;
 	font-size:18px;
 	border-radius:5px;
 	text-shadow:none;
-	font-family:"GFSDidot Regular";
 	cursor:pointer;
 	margin:0px auto 0px auto;
 	
@@ -174,6 +170,7 @@ clear:both;
     width:100%;
     background:#aaa;
     overflow:auto;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 	
 }
 
@@ -209,9 +206,11 @@ clear:both;
 .favourate_bg_color_lt span{
 	    margin: 0 auto 0 auto;
 		padding:0px 0px 0px 0px;
-		float:left; font-weight:bold;
+		float:left; 
 		font-size:16px;
-		font-family:"GFSDidot Regular";
+		color:#000;
+	
+		
 	
 }
 
@@ -246,9 +245,10 @@ clear:both;
 .favourate_change_color_lt span{
 	    margin: 0 auto 0 auto;
 		padding:0px 0px 0px 0px;
-		float:left; font-weight:bold;
-		font-size:14px;
-		font-family:"GFSDidot Regular";
+		float:left; 
+		font-size:16px;
+		color:#000;
+		
 		
 
 }
@@ -345,9 +345,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', end
 .default_phonebook_lt span{
 	    margin: 0 auto 0 auto;
 		padding:0px 0px 0px 0px;
-		float:left; font-weight:bold;
+		float:left;
 		font-size:16px;
-		font-family:"GFSDidot Regular";
 		width:180px;
 		height:22px;
 		overflow:hidden;
@@ -397,10 +396,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', end
 .default_phonebook_color_lt span{
 	    margin: 0 auto 0 auto;
 		padding:0px 0px 0px 0px;
-		float:left; font-weight:bold;
+		float:left;
 		font-size:16px;
-		font-family:"GFSDidot Regular";
-	
+			
 		
 
 }
@@ -413,7 +411,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', end
 	font-size:22px;
 	text-align:center;
 	width:100%;
-	font-family:"GFSDidot Regular";
+	
 }
 
 .settings_secu{
@@ -507,7 +505,6 @@ width:100%;
 		padding:0px 0px 0px 0px;
 		font-weight:bold;
 		font-size:14px;
-		font-family:"GFSDidot Regular";
 		word-wrap:break-word;
 		
 	
@@ -549,7 +546,6 @@ border-top-color: #acacac;
 		padding:0px 0px 0px 0px;
 		font-weight:bold;
 		font-size:14px;
-		font-family:"GFSDidot Regular";
 		word-wrap:break-word;
 
 		
@@ -574,7 +570,6 @@ border-top-color: #acacac;
 		padding:0px 0px 0px 0px;
 		float:left; font-weight:bold;
 		font-size:14px;
-		font-family:"GFSDidot Regular";
 		word-wrap:break-word;
 		
 
@@ -684,7 +679,6 @@ border-top-color: #acacac;
     font-size:20px;
 	border-radius:5px;
 	text-shadow:none;
-	font-family:"Palatino Linotype";
 	cursor:pointer;
 	margin:15px auto 0px auto;
 }
@@ -1408,7 +1402,7 @@ height:68px !important;
   font-size: 18px;
   text-align: center;
   width: 100%;
-  font-family: "GFSDidot Regular";
+ 
 }
 .settings_app
 {
@@ -1417,7 +1411,7 @@ height:68px !important;
 	font-size:20px;
 	text-align:center;
 	width:100%;
-	font-family:"GFSDidot Regular";
+
 	
 }
 .taxi_scroll{
@@ -1488,7 +1482,6 @@ height:50px !important;
 
 	.modalDialog {
 		position: fixed;
-		font-family:"GFSDidot Regular";
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -1663,7 +1656,6 @@ height:50px !important;
 	  font-weight: normal;
 	  text-decoration: none;
 	  line-height: 1;
-	  font-family:"GFSDidot Regular";
 	  font-size: 14px;
 	  position: relative;
 	}
