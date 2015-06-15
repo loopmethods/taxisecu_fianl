@@ -373,7 +373,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', end
 .default_phonebook_color_rt{
 	width:10%;
 	height:55px;
-	padding:23px 0px 5px 5px;
+	padding:18px 0px 5px 5px;
     margin: 0 auto 0 auto;
 	background-color:#f6f4f4;
 	float:left;
@@ -837,7 +837,7 @@ color: #FFFFFF;
 .default_phonebook_color_rt{
 	width:15%;
 	height:55px;
-	padding:23px 0px 5px 5px;
+	padding:18px 0px 5px 5px;
     margin: 0 auto 0 auto;
 	background-color:#f6f4f4;
 	float:left;
@@ -952,7 +952,7 @@ color: #FFFFFF;
 .default_phonebook_rt{
 	width:18%;
 	height:55px;
-	padding:23px 0px 5px 5px;
+	padding:18px 0px 5px 5px;
 	background-color:#FFF;
     margin: 0 auto 0 auto;
 	float:left;
@@ -985,7 +985,7 @@ color: #FFFFFF;
 .default_phonebook_color_rt{
 	width:18%;
 	height:55px;
-	padding:23px 0px 5px 5px;
+	padding:18px 0px 5px 5px;
     margin: 0 auto 0 auto;
 	background-color:#f6f4f4;
 	float:left;
@@ -1948,4 +1948,29 @@ height:50px !important;
 	
 	
 	
+}
+input[type="checkbox"]{
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+background: #000;
+border-radius: 5px;
+box-sizing: border-box;
+position: relative;
+box-sizing: content-box ;
+width: 50px;
+height: 30px;
+border-width: 0;
+transition: all .3s linear;
+
+}
+input[type="checkbox"]:checked{
+font-size: 22px;
+  background-color: #FFCC00;
+  
+}
+input[type="checkbox"]:focus{
+  outline: 0 none;
+  box-shadow: none;
+
 }
